@@ -1,10 +1,12 @@
-pipeline{
+pipeline {
     agent any
-    stage {
-        stage('Clone'){
-            steps{
-                git 'https://github.com/gnart2k/tesst.git'
-              }
-          }
-      }
-  }
+
+    stages {
+        stage('Clone repository') {
+            steps {
+                // Clone the repository from GitHub
+                git 'https://github.com/yourusername/yourrepository.git'
+            }
+        }
+    }
+}
